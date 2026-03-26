@@ -1,1 +1,16 @@
-
+order_id,order_datetime,mesic_objednavka,rok_objednavka,customer_id,city,region,email,product_id,product_name,channel,category,quantity,unit_price_czk,unit_cost_czk,promo_code,trzby,celkove_naklady,zisk,order_status,hodina,promo_used
+2,2024-09-24 13:43:00,9,2024,368,Hradec Králové,Královéhradecký,petranemec.6715@outlook.com,55,SoftNest clock oak,store,Decor,2,"3194,89","2233,36",SPRING15,"6389,78","4466,72","1923,06",completed,13,Yes
+2,2024-09-24 13:43:00,9,2024,368,Hradec Králové,Královéhradecký,petranemec.6715@outlook.com,291,SoftNest office chair green,store,Office,1,"9202,93","7240,34",SPRING15,"9202,93","7240,34","1962,59",completed,13,Yes
+3,2025-09-24 11:07:00,9,2025,117,Brno,Jihomoravský,evasvoboda.2605@company.cz,69,Oak&Co rug green,e-shop,Textiles,1,"2347,36","1666,45",SPRING15,"2347,36","1666,45","680,91",completed,11,Yes
+4,2025-07-24 12:57:00,7,2025,789,Praha,Praha,luciecerny.6913@yahoo.com,42,LumiHome pillow walnut,store,Textiles,1,"965,23","654,49",,"965,23","654,49","310,74",completed,12,No
+5,2025-04-13 20:07:00,4,2025,449,Liberec,Liberecký,petrasedlacek.4010@gmail.com,113,UrbanWood vase green,e-shop,Decor,2,"3701,87","2606,55",BF20,"7403,74","5213,1","2190,64",completed,20,Yes
+6,2024-02-12 16:06:00,2,2024,576,Liberec,Liberecký,tomasruzicka.5930@gmail.com,252,Oak&Co sofa walnut,store,Sofas & Armchairs,2,"8897,97","4408,25",,"17795,94","8816,5","8979,44",completed,16,No
+6,2024-02-12 16:06:00,2,2024,576,Liberec,Liberecký,tomasruzicka.5930@gmail.com,296,Riva office chair grey,store,Office,1,"5920,0","3138,8",,"5920,0","3138,8","2781,2",completed,16,No
+6,2024-02-12 16:06:00,2,2024,576,Liberec,Liberecký,tomasruzicka.5930@gmail.com,277,Comforto bed frame beige,store,Beds & Mattresses,1,"9990,0","6331,7",,"9990,0","6331,7","3658,3",completed,16,No
+7,2026-02-19 16:31:00,2,2026,453,Ostrava,Moravskoslezský,petrasedlacek.9211@company.cz,102,CasaLine bunk bed blue,e-shop,Kids,1,"15289,44","9768,39",,"15289,44","9768,39","5521,05",completed,16,No
+8,2025-03-25 14:49:00,3,2025,207,Ostrava,Moravskoslezský,davidkucera.7354@outlook.com,181,UrbanWood wardrobe green,e-shop,Wardrobes & Storage,1,"2295,71","1090,79",,"2295,71","1090,79","1204,92",completed,14,No
+8,2025-03-25 14:49:00,3,2025,207,Ostrava,Moravskoslezský,davidkucera.7354@outlook.com,72,LumiHome bench grey,e-shop,Dining,1,"11650,0","7048,11",,"11650,0","7048,11","4601,89",completed,14,No
+9,2024-09-29 13:45:00,9,2024,88,Ostrava,Moravskoslezský,martinpokorny.6152@seznam.cz,260,VivaCasa armchair blue,e-shop,Sofas & Armchairs,1,"32597,87","17818,24",,"32597,87","17818,24","14779,63",completed,13,No
+9,2024-09-29 13:45:00,9,2024,88,Ostrava,Moravskoslezský,martinpokorny.6152@seznam.cz,250,Praktik toy storage green,e-shop,Kids,1,"7761,46","5264,88",,"7761,46","5264,88","2496,58",completed,13,No
+9,2024-09-29 13:45:00,9,2024,88,Ostrava,Moravskoslezský,martinpokorny.6152@seznam.cz,235,Nordika dining table green,e-shop,Dining,1,"13860,0","8500,8",,"13860,0","8500,8","5359,2",completed,13,No
+10,2024-08-21 10:51:00,8,2024,432,České Budějovice,Jihočeský,petrapospisil.6458@outlook.com,191,LumiHome mattress beige,store,Beds & Mattresses,1,"41768,83","21875,51",,"41768,83","21875,51","19893,32",completed,10,No
