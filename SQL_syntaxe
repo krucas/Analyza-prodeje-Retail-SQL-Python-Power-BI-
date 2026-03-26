@@ -1,0 +1,66 @@
+import pandas as pd
+from sqlalchemy import create_engine
+import unicodedata
+
+engine = create_engine(
+"postgresql://postgres:*@localhost:5432/retail_sconto"
+)
+
+
+query = """
+SELECT
+    o.order_id,
+    o.order_datetime,
+    EXTRACT(MONTH FROM o.order_datetime) AS mesic_objednavka,
+    EXTRACT(YEAR FROM o.order_datetime) AS rok_objednavka,
+    o.customer_id,
+    c.city,
+	c.region,
+	c.email,
+    p.product_id,
+    p.product_name,
+	o.channel,
+    p.category,
+    oi.quantity,
+    oi.unit_price_czk,
+    p.unit_cost_czk,
+	o.promo_code,
+    (oi.quantity * oi.unit_price_czk) AS trzby,
+    (oi.quantity * p.unit_cost_czk) AS celkove_naklady,
+    (oi.quantity * oi.unit_price_czk) - (oi.quantity * p.unit_cost_czk) AS zisk,
+     o.order_status
+FROM orders o
+JOIN customers c 
+    ON o.customer_id = c.customer_id
+JOIN order_items oi 
+    ON o.order_id = oi.order_id
+JOIN products p 
+    ON oi.product_id = p.product_id
+WHERE order_status = 'completed';
+"""
+
+df = pd.read_sql(query, engine)
+
+df = df.drop_duplicates()
+
+ #úprava emailových adres na moznost odeslani
+def cisty_email(text):
+    text = text.lower()
+    return ''.join(
+        c for c in unicodedata.normalize('NFD', text)
+        if unicodedata.category(c) != 'Mn'
+    )
+df["email"] = df["email"].apply(cisty_email)
+
+
+
+
+df['mesic_objednavka'] = df['mesic_objednavka'].astype(int)
+df['rok_objednavka'] = df['rok_objednavka'].astype(int)
+df['hodina'] = df['order_datetime'].dt.hour
+df['promo_used'] = df['promo_code'].notna().map({True: 'Yes', False: 'No'})
+
+
+df.info()
+df.head(5)
+df.to_csv(r'C:\Users\Toshiba\Desktop\retail\project_data_2026.csv', index=False,decimal=',', encoding='utf-8')
